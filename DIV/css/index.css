@@ -1,0 +1,313 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #eee;
+    color: #555;
+    font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
+    font-size: 1em;
+    line-height: 2em;
+}
+
+@media (max-width: 991px) {
+
+    /* 当屏幕宽度 ≤ 991px 时生效 */
+    body {
+        padding-left: 0 !important;
+        /* 强制移除左内边距 */
+        padding-right: 0 !important;
+        /* 强制移除右内边距 */
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
+    font-weight: bold;
+    line-height: 1.5;
+    margin: 20px 0 15px;
+}
+
+h1 {
+    font-size: 1.5em;
+}
+
+h2 {
+    font-size: 1.375em;
+}
+
+h3 {
+    font-size: 1.25em;
+}
+
+h4 {
+    font-size: 1.125em;
+}
+
+h5 {
+    font-size: 1em;
+}
+
+h6 {
+    font-size: 0.875em;
+}
+
+a {
+    border-bottom: 1px solid #999;
+    color: #555;
+    outline: 0;
+    text-decoration: none;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    cursor: pointer;
+}
+
+a:hover {
+    border-bottom-color: #222;
+    color: #222;
+}
+
+iframe,
+img,
+video {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+}
+
+hr {
+    background-color: #ddd;
+    background-image: repeating-linear-gradient(-45deg, #fff, #fff 4px, transparent 4px, transparent 8px);
+    border: 0;
+    height: 3px;
+    margin: 40px 0;
+}
+
+blockquote {
+    border-left: 4px solid #ddd;
+    color: #666;
+    margin: 0;
+    padding: 0 15px;
+}
+
+blockquote cite::before {
+    content: '-';
+    padding: 0 5px;
+}
+
+#background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+#content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#content-left {
+    width: 70%;
+    float: none;
+}
+
+aside {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+#content-right {
+    position: sticky;
+    top: 5px;
+    width: 28%;
+    float: none;
+    min-height: 100vh;
+}
+
+.site-header {
+    display: inline-block;
+    padding: 15px 20px;
+    background-color: #222222;
+}
+
+.site-title {
+    color: #fff;
+    text-align: center;
+    font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
+    font-size: 1.375em;
+    font-weight: normal;
+    line-height: 1.5;
+    vertical-align: top;
+}
+
+.site-subtitle {
+    color: #ddd;
+    text-align: center;
+    font-size: 0.8125em;
+    margin-top: 10px;
+}
+
+li::marker {
+    content: none;
+}
+
+#content-right-top {
+    background-color: #ffffff;
+    border-radius: initial;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12),
+        0 3px 1px -2px rgba(0, 0, 0, 0.06),
+        0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+}
+
+.site-nav {
+    padding: 10px 0px;
+}
+
+.menu a {
+    border-bottom: 0;
+    display: block;
+    font-style: 0.8125em;
+    transition-delay: 0s;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+    padding: 0 10px;
+}
+
+.menu a:hover {
+    background-color: #eee;
+    color: #222222;
+}
+
+#content-right-bottom {
+    background: #fff;
+    border-radius: initial;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12),
+        0 3px 1px -2px rgba(0, 0, 0, 0.06),
+        0 1px 5px 0 rgba(0, 0, 0, 0.12),
+        0 -1px 0.5px 0 rgba(0, 0, 0, 0.09);
+    /*Material Design风格 */
+    box-sizing: border-box;
+    color: #555;
+    width: 228.55px;
+    display: block;
+    padding: 10px 10px;
+    margin: 0;
+}
+
+.site-author-image {
+    display: block;
+    margin: 0 auto;
+    padding: 2px;
+    max-width: 140px;
+    height: auto;
+    border: 1px solid #eee;
+    border-radius: 80px;
+    transition: transform 1s ease-out;
+}
+
+.site-author-name {
+    color: #222222;
+    font-size: 1.125em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.site-description {
+    height: 26px;
+    text-align: center;
+    font-size: 0.875em;
+
+}
+
+.site-author-image:hover {
+    transform: rotate(360deg);
+    transition: transform 1s linear;
+}
+
+.site-state {
+    display: flex;
+    justify-content: center;
+    line-height: 1.4;
+    margin-top: 10px;
+    overflow: hidden;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.site-state a {
+    text-decoration: none;
+    border-bottom: 0;
+}
+
+.site-state a:hover {
+    color: #222222;
+}
+
+.item {
+    padding: 0 10px;
+}
+
+.count {
+    display: block;
+    color: inherit;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.item:not(:first-child) {
+    border-left: 2px solid #eee;
+}
+
+.link-of-author a {
+    border-bottom: 0;
+    display: block;
+}
+
+.link-of-author {
+    display: flex;
+    justify-content: center;
+}
+
+.link-of-author a:hover {
+    color: #222222;
+    background-color: #eee;
+}
+
+.link {
+    width: 50%;
+    text-align: center;
+    margin-top: 2px;
+    margin-bottom: -6px;
+}
+
+#content-left {
+    height: 2222px;
+}
+
+.block {
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-color: yellow;
+    border-radius: 50%;
+    border-style: solid;
+}
